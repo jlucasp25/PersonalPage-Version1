@@ -6,10 +6,17 @@
         <meta name="keywords" content="Programming, Computer Science, CV, Career, Networks, C, Java, Android">
         <meta name="author" content="João Lucas Pires">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" 
+      href="./assets/favicon/favicon.png">
         <!--CSS elements-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
         <link rel="stylesheet" type="text/css" href="./assets/css/file.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+      <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+      <script src="https://kit.fontawesome.com/51b494193f.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
     </head>
     <body class="bg-light">
       <div id="header">   
@@ -56,7 +63,7 @@
         <li class="nav-item mr-2">
           <section class="square-anim">
       <a id="nav_4">
-      <span class="text">Private Projects</span>
+      <span class="text">Personal Projects</span>
       <span class="line -right"></span>
       <span class="line -top"></span>
       <span class="line -left"></span>
@@ -91,54 +98,436 @@
               <p class="lead">
                 Currently I'm taking a master's degree in Network and Computer Systems Engineering at the Faculty of Sciences @ University of Porto.
                 <br>
-                I have some experience developing applications and programs for business and more personal sectors.
                 <br>
-                My experiences as both a front and back-end developer...
+                I have some experience developing applications and programs for various sorts of business, and have familiarity with an array of programming languages, frameworks and libraries.
+                <br>
+                <br>
+                Some of my current focus are on improving my front-end and software architecture skills.
+                <br>
+                <br>
+                I always strive to make the most of the applications I develop, focusing on a balance between acessibility and pleasing UI while delivering the functionality required.
               </p>
             </div>
             <!--End of Page 1-->
             <!--======================================-->
             <!--Page 2: CV-->
-            <div class="card-body p-5" id="pag_2" >
+            <div class="card-body p-5" id="pag_2" style="display: none;">
               <h1 class="font-weight-light">Curriculum Vitae</h1>
-              <p class="lead">Here you can view or <a href="./assets/pdf/cv_english_february_2020.pdf">download</a> my Curriculum Vitae.</p>
               <hr>
-              <div class="well">
-                <embed src="./assets/pdf/cv_english_february_2020.pdf" width="1000" height="550" 
-                type="application/pdf">
+              <p class="lead">Here you can view or <a href="./assets/pdf/cv_english_february_2020.pdf">download</a> my Curriculum Vitae.</p>
+              <div class="">
+                <embed src="./assets/pdf/cv_english_february_2020.pdf" width="1000" height="500" style="border-radius:10px;" type="application/pdf">
               </div>
             </div>
             <!--End of Page 2-->
             <!--======================================-->
             <!--Page 3: Academic Projects-->
-            <div class="card-body p-5" id="pag_3" >
+            <div class="card-body p-5" id="pag_3" style="display: none;">
               <h1 class="font-weight-light">Academic Projects</h1>
-              <p class="lead">Here you can download my Curriculum Vitae.</p>
               <hr>
-              <div>
-                INSERT CV HERE
+              <p class="lead">Some of my projects during my master's degree classes.</p>
+              <div class="list-group well shadow-lg" style="overflow: auto;height:80%;" data-simplebar>
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Construction Costs Form (INTERNSHIP)</span>
+                    </div>
+                    <div class="col-6 text-center">
+                      <span>A web application for insertion of real estate construction expenses for further integration on a data warehouse.</span>
+                    </div>
+                    <div class="col-3 text-right align-middle">
+                      <img class="language_logo img-responsive mr-1" src="assets/img/python.png">
+                      <img class="language_logo img-responsive mr-1" src="assets/img/django.png">
+                      <img class="language_logo img-responsive mr-1" src="assets/img/bootstrap4.png">
+                      <img class="language_logo img-responsive" src="assets/img/jq.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 1-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">DCEMS Web Interface</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A Web application to manage server states and energy management.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive" src="assets/img/dart.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 2-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">IoT Proof-of-concept Android App</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A proof-of-concept for an Android app capable of controlling a basic IoT system using the MQTT protocol.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive mr-2" src="assets/img/dart.png">
+                      <img class="language_logo img-responsive" src="assets/img/flutter.svg">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 3-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Intermediate Compiler for RUST</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A (semi) compiler for a subset of the RUST language. Outputs only intermediate code.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive" src="assets/img/c.webp">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 4-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Language Interpreter and AST Generator for RUST</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>Interprets a subset of the RUST language and generates an AST.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive" src="assets/img/c.webp">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 5-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Graphical Interface for a "Rides Sharing" app</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A graphical interface made using GWT for a "rides sharing" application that uses the Google Maps API.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive mr-2" src="assets/img/java.png">
+                      <img class="language_logo img-responsive" src="assets/img/gwt.svg">
+                    </div>
+                  </div>
+                </button>
+                 <!--Item 6-->
+                 <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">"Rides Sharing" application</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>An application to simulate a "rides sharing" service. Includes a module of JUnit tests.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive mr-1" src="assets/img/java.png">
+                    </div>
+                  </div>
+                </button>
+                 <!--Item 6-->
+                 <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Remote server for a Connect4 game</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A server to allow remote play using a web-based Connect4 game.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive ml-2" src="assets/img/nodejs.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 7-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Web-based Connect4 game</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A web-based Connect4 game made using JavaScript.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive ml-2" src="assets/img/javascript.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 8-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">"Complaints Portal" Interface Prototype</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A prototype for a "complaints portal" web interface.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive mr-2" src="assets/img/html5.webp">
+                      <img class="language_logo img-responsive" src="assets/img/css3.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 9-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Connect4 Bot</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A bot that plays a Connect4 game using adversarial search. Uses the Minimax and Alpha-Beta pruning algorithms.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive ml-2" src="assets/img/c.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 10-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">15 Puzzle Solver</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A bot that solves a 15-puzzle using heuristic search. Uses (B/L)DFS, BFS, A* and greedy algorithms.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive ml-2" src="assets/img/c.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 11-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Parser for Prefix Arithmetics</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A parser to calculate prefix arithmetics expressions.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive ml-2" src="assets/img/python.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 12-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Fibonacci & "BigNumber" calculator</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A calculator for big numbers that can't be represented using standard integers. Also computes the Fibonacci sequence.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive ml-2" src="assets/img/c.webp">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 13-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Supermarket Manager</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A stocks and purchases manager for a supermarket.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive ml-2" src="assets/img/c.webp">
+                    </div>
+                  </div>
+                </button>
               </div>
             </div>
             <!--End of Page 3-->
             <!--======================================-->
             <!--Page 4: Personal Projects-->
-            <div class="card-body p-5" id="pag_4" >
+            <div class="card-body p-5" id="pag_4"  style="display: none;">
               <h1 class="font-weight-light">Personal Projects</h1>
-              <p class="lead">Here you can download my Curriculum Vitae.</p>
               <hr>
-              <div>
-                INSERT CV HERE
+              <p class="lead">Some of my projects outside of classes.</p>
+              <div class="list-group shadow-lg" style="overflow: auto;height:80%;" data-simplebar>
+                <!--Item 1-->
+                <button type="button" class="list-group-item list-group-item-action override-grey">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">MEDI-MAIA</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span></span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <b class="strong">MEDI-MAIA</b>
+                    </div>
+                  </div>
+                </button>
+                <!--Item 2-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Applet for GDPR Compliance Purposes </span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A small applet with a graphical interface that generates a GDPR consent document with the given name.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive mr-1" src="assets/img/python.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 1-->
+                <button type="button" class="list-group-item list-group-item-action override-grey shadow">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">FOCA Automotive</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span></span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="foca_logo img-responsive" src="assets/img/foca.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 2-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Android App for Car Wash Bookings</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>An Android app for customers to book car washes and check its state. 
+                        A server-side application was also developed to handle the app's requests.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive mr-1" src="assets/img/dart.png">
+                      <img class="language_logo img-responsive mr-1" src="assets/img/flutter.svg">
+                      <img class="language_logo img-responsive" src="assets/img/nodejs.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 3-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">WebApp for Booking and Customer Management</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A web portal to allow the staff to view and control bookings.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive" src="assets/img/bootstrap4.png">
+                      <img class="language_logo img-responsive " src="assets/img/php.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 4-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">WebApp for Car Wash Bookings</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A web-based app for customers to book car washes and check its state.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive" src="assets/img/bootstrap4.png">
+                      <img class="language_logo img-responsive " src="assets/img/php.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 5-->
+                <button type="button" class="list-group-item list-group-item-action override-grey shadow">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">FarCar Automotive</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span></span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="farcar_logo img-responsive" src="assets/img/farcar.gif">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 6-->
+                 <!--Item 7-->
+                 <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Mobile-oriented Webpage</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>Alternative version of the website oriented for mobile devices with a more responsive design.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive" src="assets/img/bootstrap4.png">
+                      <img class="language_logo img-responsive " src="assets/img/php.png">
+                    </div>
+                  </div>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">WebApp for Vehicle Management</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A web portal to allow the staff to manage the vehicles displayed on the website.
+                        Allows insertion, edition, and removal operations.
+                      </span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive" src="assets/img/bootstrap4.png">
+                      <img class="language_logo img-responsive " src="assets/img/php.png">
+                    </div>
+                  </div>
+                </button>
+                <!--Item 6-->
+                <button type="button" class="list-group-item list-group-item-action">
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <span class="text-muted">Dynamic Website for Stock Display</span>
+                    </div>
+                    <div class="col-7 text-center">
+                      <span>A dynamic website that shows the current vehicles in stock.</span>
+                    </div>
+                    <div class="col-2 text-right align-middle">
+                      <img class="language_logo img-responsive" src="assets/img/bootstrap4.png">
+                      <img class="language_logo img-responsive " src="assets/img/php.png">
+                    </div>
+                  </div>
+                </button>
+              
               </div>
             </div>
             <!--End of Page 4-->
             <!--======================================-->
             <!--Page 5: Contacts-->
-            <div class="card-body p-5" id="pag_5" >
+            <div class="card-body p-5" id="pag_5" style="display: none;" >
               <h1 class="font-weight-light">Contacts</h1>
-              <p class="lead">Here you can download my Curriculum Vitae.</p>
               <hr>
+              <p class="lead">Here's some options to get in touch with me:</p>
               <div>
-                INSERT CV HERE
+                <div class="row justify-content-center text-center align-items-center">
+                  <div class="col-4">
+                    <a class="reset_a" href="https://www.linkedin.com/in/jlucasp/" target="_blank"><i class="fab fa-3x fa-linkedin-in"></i></a>
+                  </div>
+                  <div class="col-4">
+                    <a class="reset_a" href="mailto:jlucasp25@gmail.com" target="_blank"><i class="fas fa-3x fa-envelope"></i></a>
+                  </div>
+                  <div class="col-4">
+                    <a class="reset_a" href="https://www.github.com/isynthx/" target="_blank"><i class="fab fa-3x fa-github"></i></a>
+                  </div>
+                </div>
+                <div class="row ml-0 mb-2 smiley" style="position: absolute;bottom: 0">
+                  ;)
+                  <!--Get out! These are not the droids you are looking for!-->
+                </div>
               </div>
             </div>
             <!--End of Page 5-->
@@ -156,12 +545,7 @@
       </div>
       <!--End of footer-->
       <!--======================================-->
-      <!--JS elements-->
-     
-      <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"></script>
+      <!--JS elements-->     
       <script>$('#copy_year').text(' ' + new Date().getFullYear() + ' ');</script>
         <script>
           let except = 1;
@@ -187,6 +571,6 @@
             });
           }
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </body>
