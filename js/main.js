@@ -488,10 +488,10 @@ function enableCallbacks(personalContainer) {
         personalContainer.displayWorkProjectsPage();
     });
     links[3].addEventListener('click', () => {
-        personalContainer.displayAcademicProjectsPage();
+        personalContainer.displayPersonalProjectsPage();
     });
     links[4].addEventListener('click', () => {
-        personalContainer.displayPersonalProjectsPage();
+        personalContainer.displayAcademicProjectsPage();
     });
     links[5].addEventListener('click', () => {
         personalContainer.displayContactsPage();
