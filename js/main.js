@@ -1,5 +1,33 @@
 "use strict";
 
+const WORK_PROJECTS = [
+    {
+        'name':'Construction Costs Form - Interactive Front-End',
+        'description':'A SPA interface for a wizard-like form inside a web application for insertion of real estate construction expenses.',
+        'languages':['django','react']
+    },
+    {
+        'name':'easy-remap',
+        'description':'A website with online store for automotive services.',
+        'languages':['django']
+    },
+    {
+        'name':'RE-Portugal',
+        'description':'An online magazine website for news about building rehabilitation.',
+        'languages':['django', 'wagtail']
+    },
+    {
+        'name':'Generic Filter Component',
+        'description':'WebComponent built in Svelte for filtering generic objects with collapsable categories.',
+        'languages':['svelte']
+    },
+    {
+        'name':'Form for Dynamic Form Creation',
+        'description':'WebApp with a form that allow users to create dynamic forms that can be re-used and easily integrated.',
+        'languages':['django', 'json-schema']
+    }
+]
+
 const ACADEMIC_PROJECTS = [
     {
         'name':'Construction Costs Form (INTERNSHIP)',
@@ -9,7 +37,7 @@ const ACADEMIC_PROJECTS = [
     {
         'name':'DCEMS Web Interface',
         'description':'A Web application to manage server states and energy management.',
-        'languages':['dart']
+        'languages':['dart','python']
     },
     {
         'name':'IoT Proof-of-concept Android App',
@@ -157,7 +185,11 @@ const LANGUAGES_IMGS = new Map(
         ['java', 'img/java.png'],
         ['javascript','img/javascript.png'],
         ['nodejs','img/nodejs.png'],
-        ['php','img/php.png']
+        ['php','img/php.png'],
+        ['react','img/react.png'],
+        ['svelte','img/svelte.png'],
+        ['wagtail','img/wagtail.png'],
+        ['json-schema','img/json_schema.png']
     ]
 );
 
@@ -181,12 +213,24 @@ class Project {
         let row = document.createElement('div');
         row.classList.add('project-row');
         row.classList.add('p-2')
-        let projectName = document.createElement('span');
+        row.classList.add('row')
+        let projectName = document.createElement('div');
         projectName.classList.add('text-muted');
+        projectName.classList.add('col-sm-3');
+        projectName.classList.add('col-12');
         projectName.innerText = this.name;
-        let projectDescription = document.createElement('span');
+        let projectDescription = document.createElement('div');
+        projectDescription.classList.add('col-12');
+        projectDescription.classList.add('col-sm-6');
         projectDescription.innerText = this.description;
         let projectLanguages = document.createElement('div');
+        projectLanguages.classList.add('col-sm-3');
+        projectLanguages.classList.add('justify-content-sm-end');
+        projectLanguages.classList.add('col-12');
+        projectLanguages.classList.add('d-flex');
+        projectLanguages.classList.add('my-2');
+        projectLanguages.classList.add('my-sm-0');
+        projectLanguages.classList.add('justify-content-center');
         if (this.languages == null && this.description == null) {
             wrapperButton.classList.add('override-grey');
         }
@@ -245,6 +289,7 @@ class PersonalContainer {
         this.bodyNode = document.querySelector('#page-body');
         this.bodyNode.classList.add('mt-2');
         this.aboutPage = this.buildAboutPage();
+        this.workPage = this.buildWorkProjectsPage();
         this.curriculumPage = this.buildCurriculumPage();
         this.academicProjectsPage = this.buildAcademicProjectsPage();
         this.personalProjectsPage = this.buildPersonalProjectsPage();
@@ -266,7 +311,7 @@ class PersonalContainer {
         let hr = document.createElement('hr');
         let content = document.createElement('p');
         content.classList.add('lead');
-        content.innerHTML = 'Currently I\'m taking a master\'s degree in Network and Computer Systems Engineering at the Faculty of Sciences @ University of Porto.<br><br>' +
+        content.innerHTML = 'Currently I\'m working at Evolutio in Porto, Portugal and taking a master\'s degree in Network and Computer Systems Engineering at the Faculty of Sciences @ University of Porto.<br><br>' +
             'I have some experience developing applications and programs for various sorts of business, and have familiarity with an array of programming languages, frameworks and libraries.<br><br>' +
             'Some of my current focus are on improving my front-end and software architecture skills.<br><br>' +
             'I always strive to make the most of the applications I develop, focusing on a balance between acessibility and pleasing UI while delivering the functionality required.';
@@ -283,9 +328,9 @@ class PersonalContainer {
         let hr = document.createElement('hr');
         let content = document.createElement('p');
         content.classList.add('lead');
-        content.innerHTML = 'Here you can view or <a target="_blank" rel="noopener noreferrer" class="pdf-link" href="pdf/CV_ING_august_2020.pdf">download</a> my Curriculum Vitae.';
+        content.innerHTML = 'Here you can view or <a target="_blank" rel="noopener noreferrer" class="pdf-link" href="pdf/CV_ING_jun_2021.pdf">download</a> my Curriculum Vitae.';
         let pdfViewer = document.createElement('embed');
-        pdfViewer.src = 'pdf/CV_ING_august_2020.pdf';
+        pdfViewer.src = 'pdf/CV_ING_jun_2021.pdf';
         pdfViewer.setAttribute('type','application/pdf');
         pdfViewer.classList.add('pdf-container');
         appendChildren(container,[header,hr,content,pdfViewer,this.buildPDFWarning()]);
@@ -299,6 +344,20 @@ class PersonalContainer {
         content.classList.add('lead');
         content.innerHTML = 'Sadly looks like you are using a mobile browser. In order to view the pdf, you must download it first.';
         container.appendChild(content);
+        return container;
+    }
+
+    buildWorkProjectsPage() {
+        let container = this.buildContainer();
+        let header = document.createElement('h1');
+        header.classList.add('font-weight-light');
+        header.innerText = 'Work Projects';
+        let hr = document.createElement('hr');
+        let content = document.createElement('p');
+        content.classList.add('lead');
+        content.innerHTML = 'Some of the projects made during my work hours.';
+        let projectListing = ProjectListing.fromArray(WORK_PROJECTS);
+        appendChildren(container,[header,hr,content,projectListing.toDOMNode()]);
         return container;
     }
 
@@ -343,8 +402,8 @@ class PersonalContainer {
         iconContainer.classList.add('contacts-icon-container');
         appendChildren(iconContainer,[
             this.createContactIcon('fab','fa-linkedin-in',"https://www.linkedin.com/in/jlucasp/"),
-            this.createContactIcon('fas','fa-envelope',"mailto:jlucasp25@gmail.com"),
-            this.createContactIcon('fab','fa-github',"https://www.github.com/isynthx/"),
+            this.createContactIcon('fas','fa-envelope',"mailto:jpires@evolutio.pt"),
+            this.createContactIcon('fab','fa-github',"https://www.github.com/jlucasp25/"),
         ]);
         appendChildren(container,[header,hr,content,iconContainer]);
         return container;
@@ -378,6 +437,11 @@ class PersonalContainer {
         this.bodyNode.appendChild(this.academicProjectsPage);
     }
 
+    displayWorkProjectsPage() {
+        this.clearBody();
+        this.bodyNode.appendChild(this.workPage);
+    }
+
     displayPersonalProjectsPage() {
         this.clearBody();
         this.bodyNode.appendChild(this.personalProjectsPage);
@@ -409,24 +473,27 @@ function enableCallbacks(personalContainer) {
     let links = [
         document.querySelector('#about-link'),
         document.querySelector('#curriculum-link'),
-        document.querySelector('#academic-link'),
+        document.querySelector('#work-link'),
         document.querySelector('#personal-link'),
+        document.querySelector('#academic-link'),
         document.querySelector('#contacts-link')
     ];
     links[0].addEventListener('click', () => {
         personalContainer.displayAboutPage();
     });
-
     links[1].addEventListener('click', () => {
         personalContainer.displayCurriculumPage();
     });
     links[2].addEventListener('click', () => {
-        personalContainer.displayAcademicProjectsPage();
+        personalContainer.displayWorkProjectsPage();
     });
     links[3].addEventListener('click', () => {
-        personalContainer.displayPersonalProjectsPage();
+        personalContainer.displayAcademicProjectsPage();
     });
     links[4].addEventListener('click', () => {
+        personalContainer.displayPersonalProjectsPage();
+    });
+    links[5].addEventListener('click', () => {
         personalContainer.displayContactsPage();
     });
     for (let link of links) {
