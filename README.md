@@ -1,11 +1,9 @@
-# Personal Page
+# Personal Page Version 1
 
-## Basic personal page to store my CV, current projects and work information.
+First version of my Personal Page that contains project and work information.
 
-------
+The webpage is built using basic JavaScript and containers.
 
-Allows the insertion of project data using a JSON object. Dynamically creates entries on the website.
-
-Uses "factory pattern" and toDOM() methods to build each container.
-
-Replaced by an updated version.
+Project data can be inserted using a JSON file available in this repository, the main JavaScript uses this JSON data to dynamically create project entries.
+ 
+This project isn't used anymore so it's available for you to use it.
